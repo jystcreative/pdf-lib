@@ -1020,7 +1020,7 @@ export default class PDFDocument {
    * @returns Resolves with the embedded image.
    */
   async embedPng(png: string | Uint8Array | ArrayBuffer): Promise<PDFImage> {
-    assertIs(png, 'png', ['string', Uint8Array, ArrayBuffer]);
+    // assertIs(png, 'png', ['string', Uint8Array, ArrayBuffer]);
     const bytes = toUint8Array(png);
     const embedder = await PngEmbedder.for(bytes);
     const ref = this.context.nextRef();
